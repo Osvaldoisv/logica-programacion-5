@@ -10,7 +10,7 @@
 <body>
     <div class="container-fluid text-center">
 
-        <div class="row" id="Portada">
+        <div class="row" id="Portada">   <!--PORTADA-->
             <div class="col p-4 m-4">
                 <h1>Adivina el número secreto del 1 al 100</h1>
             </div>
@@ -18,16 +18,17 @@
 
         <div class="row p-4">
             <div class="col-4">
-                <div class="input-group input-group-sm mb-3">
+                <div class="input-group input-group-sm mb-3"> <!--INPUT PARA INGRESAR NUMERO-->
                     <span class="input-group-text" id="inputGroup-sizing-sm">Ingresa un numero</span>
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="Entrada" onkeydown="detectarEnter(event)">
+                    <!--TAMBIÉN SE PUEDE PROBAR CON LA TECLA ENTER-->
                 </div>
             </div>
-            <div class="col-8 text-start">
+            <div class="col-8 text-start"> <!--PARA PROBAR NUMERO INGRESADO-->
                 <button type="button" class="btn btn-primary" onclick="apretarBoton()">Probar</button>
             </div>
 
-            <div class="row p-4">
+            <div class="row p-4"> <!--FILA con RESULTADOS e INTENTOS-->
                 <div class="col-6 text-start">
                     <h2 id="Resultados:">Resultados:</h2>
                 </div>
@@ -36,18 +37,19 @@
                 </div>
             </div>
     
-            <div class="row">
+            <div class="row"> 
                 <div class="col-6">
-                    <ul id="lista-nueva">
+                    <ul id="lista-nueva"> <!--LISTA QUE SE VA GENERANDO CON EL HISTORIAL DE NUMEROS INGRESADOS-->
                     </ul>
                 </div>
                 <div class="col-3 text-end">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Ingresa un rango</span>
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Ingresa rango o número</span> <!--INGRESAR RANGO O NUMERO ESPECIFICO-->
                     <button type="button" class="btn btn-primary" onclick="setRatio()">Confirmar</button>
                 </div>
                 <div class="col-3 text-start">
                     <input type="text" class="form-control pd-4" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="Ratio">
                     <button type="button" class="btn" data-bs-toggle="button" aria-pressed="false" id="Estado" onclick="visualToggle()">Seleccionar numero</button>
+                    <!--PESPECIFICA SI USAREMOS RANGO O NUMERO ELEGIDO-->
                 </div>
             </div>
     
