@@ -1,4 +1,4 @@
-let numeroAleatorio;
+let numeroAleatorio = 100;
 let listaVacia = [];
 
 function borrarLista(lista){
@@ -10,7 +10,9 @@ function borrarLista(lista){
 
 function setRatio(){
     ratio = document.getElementById("Ratio").value;
+    console.log(`el valor es ${ratio}`);
     let numeroAleatorio = Math.floor((Math.random(1)*(ratio))+1);
+    console.log(`el numero aleatorio es ${numeroAleatorio}`)
     return numeroAleatorio;
 }
 
@@ -21,16 +23,34 @@ function borrarInput() {
     // Establecer el valor del input como una cadena vacía
     input.value = "";
 }
+console.log(numeroAleatorio);
 
-setRatio();
+function visualToggle(){
+    let estadoBoton = document.getElementById("Estado").getAttribute("aria-pressed");
+    let nombreBoton = document.getElementById("Estado");
+
+    if (estadoBoton == "true"){
+        nombreBoton.textContent = "Seleccionar numero";
+    } else {
+        nombreBoton.textContent = "Seleccionar rango";
+    }
+}
+
 
 function apretarBoton(){
 
     let entrada = document.getElementById("Entrada").value;
     let intentos = document.getElementById("Intentos");
+    let estadoBoton = document.getElementById("Estado").ariaPressed;
     intentos.innerHTML = "Intentos: 0";
 
-    numeroAleatorio = setRatio();
+    console.log(estadoBoton);
+    if (estadoBoton == true){
+        numeroAleatorio = document.getElementById("Ratio").value;
+
+    } else {
+        numeroAleatorio = setRatio();
+    }
 
     listaActual = document.getElementById("lista-nueva");
 
