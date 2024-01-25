@@ -1,0 +1,10 @@
+/* Estilo para resaltar el último elemento */
+.ultimo-elemento-malo {
+    color: red;
+    font-weight: bold;
+}
+
+.ultimo-elemento-bueno{
+    color: green;
+    font-weight: bold;
+}
